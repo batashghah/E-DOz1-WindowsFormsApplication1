@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
                             countblue--;
                             label2.Text = Convert.ToString(countblue);
                         }
-                        
+
                         else if (x == 1)
                         {
                             turn = !turn;
@@ -532,10 +532,12 @@ namespace WindowsFormsApplication1
             while (currentButton != null && turn == false && countblue != 0)
             {
 
-                countblue--;
-                currentButton.BackColor = System.Drawing.Color.Blue;
-                if (currentButton.Name == "button1")
+
+
+                if (currentButton.Name == "button1" && winers[0] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[0] = 2;
                     while (winers[0] == 2 && winers[1] == 2 && winers[2] == 2)
                     {
@@ -554,8 +556,11 @@ namespace WindowsFormsApplication1
                         goto loop3;
                     }
                 }
-                else if (currentButton.Name == "button2")
+                else if (currentButton.Name == "button2" && winers[1] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
+
                     winers[1] = 2;
 
                     while (winers[0] == 2 && winers[1] == 2 && winers[2] == 2)
@@ -1002,7 +1007,11 @@ namespace WindowsFormsApplication1
                         button26.BackColor = System.Drawing.Color.Blue;
                         goto loop3;
                     }
-                    break;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("شما مجاز به انتخاب این خانه نمی باشید");
+                    goto loop3;
                 }
                 goto loop1;
             }
@@ -1389,15 +1398,45 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
             label3.Visible = false;
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = System.Drawing.Color.White;
+            button2.BackColor = System.Drawing.Color.White;
+            button3.BackColor = System.Drawing.Color.White;
+            button4.BackColor = System.Drawing.Color.White;
+            button5.BackColor = System.Drawing.Color.White;
+            button6.BackColor = System.Drawing.Color.White;
+            button7.BackColor = System.Drawing.Color.White;
+            button8.BackColor = System.Drawing.Color.White;
+            button9.BackColor = System.Drawing.Color.White;
+            button10.BackColor = System.Drawing.Color.White;
+            button11.BackColor = System.Drawing.Color.White;
+            button12.BackColor = System.Drawing.Color.White;
+            button13.BackColor = System.Drawing.Color.White;
+            button14.BackColor = System.Drawing.Color.White;
+            button15.BackColor = System.Drawing.Color.White;
+            button16.BackColor = System.Drawing.Color.White;
+            button17.BackColor = System.Drawing.Color.White;
+            button18.BackColor = System.Drawing.Color.White;
+            button19.BackColor = System.Drawing.Color.White;
+            button20.BackColor = System.Drawing.Color.White;
+            button21.BackColor = System.Drawing.Color.White;
+            button22.BackColor = System.Drawing.Color.White;
+            button23.BackColor = System.Drawing.Color.White;
+            button24.BackColor = System.Drawing.Color.White;
+            button26.BackColor = System.Drawing.Color.White;
+            turn = true;
+            countred = 9;
+            label1.Text = Convert.ToString(countred);
+            countblue = 9;
+            label2.Text = Convert.ToString(countblue);
+
         }
     }
 }
