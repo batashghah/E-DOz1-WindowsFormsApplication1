@@ -14,8 +14,8 @@ namespace WindowsFormsApplication1
     {
         int[] winers = new int[24];
         bool turn = true;
-        int countred = 9;
-        int countblue = 9;
+        int countred = 3;
+        int countblue = 3;
         int x = 0;
 
         public Form1()
@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                groupBox1.Text = "نوبت آبیه";
+                groupBox1.Text = "نوبت آبیه"+ countblue+"انتخاب ";
             }
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
 
@@ -66,10 +66,17 @@ namespace WindowsFormsApplication1
                             label2.Text = Convert.ToString(countblue);
                         }
 
-                        else if (x == 1)
+                        else if (countblue==0)
                         {
-                            turn = !turn;
-                            x++;
+                            System.Windows.Forms.MessageBox.Show("textBox1 campelete");
+
+                            if (textBox1.Text == "button1") { 
+                                    button9.BackColor = System.Drawing.Color.White;
+                                    winers[8] = 0;
+                                    break;
+                                }
+                           
+                            
                         }
                         goto loop2;
                     }
