@@ -29,14 +29,21 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (turn == false)
+            {
+                groupBox1.Text = "نوبت قرمزه " + countred + " انتخاب";
 
+            }
+            else
+            {
+                groupBox1.Text = "نوبت آبیه";
+            }
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
 
 
             while (currentButton != null && turn == true && countred != 0)
             {
-                countred--;
-                currentButton.BackColor = System.Drawing.Color.Red;
+
                 /* if (countred != 0)
                  {
                      countred--;
@@ -44,6 +51,8 @@ namespace WindowsFormsApplication1
                  }*/
                 if (currentButton.Name == "button1" && winers[0] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
 
                     winers[0] = 1;
                     while (winers[0] == 1 && winers[1] == 1 && winers[2] == 1)
@@ -68,6 +77,17 @@ namespace WindowsFormsApplication1
                     while (winers[0] == 1 && winers[6] == 1 && winers[7] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[0] == 1 && winers[8] == 1 && winers[20] == 1)
@@ -78,194 +98,478 @@ namespace WindowsFormsApplication1
                 }
 
                 else if
-                (currentButton.Name == "button2")
+                (currentButton.Name == "button2" && winers[1] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[1] = 1;
 
                     while (winers[0] == 1 && winers[1] == 1 && winers[2] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[1] == 1 && winers[9] == 1 && winers[21] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                 }
                 else if
-                (currentButton.Name == "button3")
+                (currentButton.Name == "button3" && winers[2] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[2] = 1;
                     while (winers[0] == 1 && winers[1] == 1 && winers[2] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[2] == 1 && winers[3] == 1 && winers[4] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[2] == 1 && winers[10] == 1 && winers[22] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button4")
+                (currentButton.Name == "button4" && winers[3] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[3] = 1;
 
                     while (winers[2] == 1 && winers[3] == 1 && winers[4] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[3] == 1 && winers[11] == 1 && winers[23] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button5")
+                (currentButton.Name == "button5" && winers[4] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[4] = 1;
 
                     while (winers[4] == 1 && winers[3] == 1 && winers[2] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[4] == 1 && winers[5] == 1 && winers[6] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[4] == 1 && winers[12] == 1 && winers[18] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button6")
+                (currentButton.Name == "button6" && winers[5] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[5] = 1;
 
                     while (winers[5] == 1 && winers[13] == 1 && winers[17] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[4] == 1 && winers[5] == 1 && winers[6] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                 }
                 else if
-                (currentButton.Name == "button7")
+                (currentButton.Name == "button7" && winers[6] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[6] = 1;
 
                     while (winers[6] == 1 && winers[5] == 1 && winers[4] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[6] == 1 && winers[14] == 1 && winers[16] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[6] == 1 && winers[7] == 1 && winers[0] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-               (currentButton.Name == "button8")
+               (currentButton.Name == "button8" && winers[7] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[7] = 1;
 
                     while (winers[6] == 1 && winers[7] == 1 && winers[0] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[19] == 1 && winers[15] == 1 && winers[7] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                 }
                 else if
-                (currentButton.Name == "button9")
+                (currentButton.Name == "button9" && winers[8] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[8] = 1;
 
                     while (winers[8] == 1 && winers[0] == 1 && winers[20] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[14] == 1 && winers[15] == 1 && winers[8] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[8] == 1 && winers[9] == 1 && winers[10] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button10")
+                (currentButton.Name == "button10" && winers[9] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[9] = 1;
 
                     while (winers[9] == 1 && winers[1] == 1 && winers[21] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[9] == 1 && winers[10] == 1 && winers[8] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button11")
+                (currentButton.Name == "button11" && winers[10] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[10] = 1;
 
                     while (winers[10] == 1 && winers[9] == 1 && winers[8] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[10] == 1 && winers[11] == 1 && winers[12] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[2] == 1 && winers[10] == 1 && winers[22] == 1)
@@ -275,8 +579,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                 (currentButton.Name == "button12")
+                 (currentButton.Name == "button12" && winers[11] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[11] = 1;
 
                     while (winers[11] == 1 && winers[3] == 1 && winers[23] == 1)
@@ -288,62 +594,156 @@ namespace WindowsFormsApplication1
                     while (winers[11] == 1 && winers[12] == 1 && winers[10] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                 (currentButton.Name == "button13")
+                 (currentButton.Name == "button13" && winers[12] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[12] = 1;
 
                     while (winers[12] == 1 && winers[11] == 1 && winers[10] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[12] == 1 && winers[4] == 1 && winers[8] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[12] == 1 && winers[13] == 1 && winers[14] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button14")
+                (currentButton.Name == "button14" && winers[13] == 0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[13] = 1;
 
                     while (winers[13] == 1 && winers[17] == 1 && winers[5] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[13] == 1 && winers[12] == 1 && winers[14] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button15")
+                (currentButton.Name == "button15" && winers[14]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[14] = 1;
 
                     while (winers[12] == 1 && winers[13] == 1 && winers[14] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[14] == 1 && winers[16] == 1 && winers[5] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[14] == 1 && winers[15] == 1 && winers[8] == 1)
@@ -353,30 +753,67 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button16")
+                (currentButton.Name == "button16" && winers[15]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[15] = 1;
 
                     while (winers[15] == 1 && winers[14] == 1 && winers[8] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[15] == 1 && winers[19] == 1 && winers[7] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button17")
+                (currentButton.Name == "button17"&& winers[16]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[16] = 1;
 
                     while (winers[16] == 1 && winers[14] == 1 && winers[6] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
@@ -388,53 +825,125 @@ namespace WindowsFormsApplication1
                     while (winers[16] == 1 && winers[17] == 1 && winers[18] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                 }
                 else if
-                (currentButton.Name == "button18")
+                (currentButton.Name == "button18" && winers[17]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[17] = 1;
 
                     while (winers[17] == 1 && winers[18] == 1 && winers[16] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[17] == 1 && winers[13] == 1 && winers[5] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                 }
                 else if
-                (currentButton.Name == "button19")
+                (currentButton.Name == "button19" && winers[18]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[18] = 1;
 
                     while (winers[18] == 1 && winers[17] == 1 && winers[16] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                     while (winers[18] == 1 && winers[12] == 1 && winers[4] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
                     while (winers[18] == 1 && winers[23] == 1 && winers[22] == 1)
                     {
                         button26.BackColor = System.Drawing.Color.Red;
+                        if (countblue > 0)
+                        {
+                            countblue--;
+                            label2.Text = Convert.ToString(countblue);
+                        }
+
+                        else if (x == 1)
+                        {
+                            turn = !turn;
+                            x++;
+                        }
                         goto loop2;
                     }
 
                 }
                 else if
-                (currentButton.Name == "button20")
+                (currentButton.Name == "button20" && winers[19]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[19] = 1;
 
                     while (winers[19] == 1 && winers[15] == 1 && winers[7] == 1)
@@ -450,8 +959,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button21")
+                (currentButton.Name == "button21" && winers[20]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[20] = 1;
 
                     while (winers[20] == 1 && winers[19] == 1 && winers[16] == 1)
@@ -472,8 +983,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button22")
+                (currentButton.Name == "button22" && winers[21]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[21] = 1;
 
                     while (winers[21] == 1 && winers[9] == 1 && winers[1] == 1)
@@ -489,8 +1002,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button23")
+                (currentButton.Name == "button23" && winers[22]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[22] = 1;
 
                     while (winers[22] == 1 && winers[10] == 1 && winers[2] == 1)
@@ -511,8 +1026,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button24")
+                (currentButton.Name == "button24" && winers[23]==0)
                 {
+                    countred--;
+                    currentButton.BackColor = System.Drawing.Color.Red;
                     winers[23] = 1;
 
                     while (winers[23] == 1 && winers[11] == 1 && winers[3] == 1)
@@ -526,6 +1043,11 @@ namespace WindowsFormsApplication1
                         button26.BackColor = System.Drawing.Color.Red;
                         goto loop2;
                     }
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("شما مجاز به انتخاب این خانه نمی باشید");
+                    goto loop2;
                 }
                 goto loop1;
             }
@@ -577,8 +1099,11 @@ namespace WindowsFormsApplication1
 
                 }
                 else if
-                (currentButton.Name == "button3")
+                (currentButton.Name == "button3" && winers[2] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
+
                     winers[2] = 2;
                     while (winers[0] == 2 && winers[1] == 2 && winers[2] == 2)
                     {
@@ -598,8 +1123,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button4")
+                (currentButton.Name == "button4" && winers[3] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[3] = 2;
 
                     while (winers[2] == 2 && winers[3] == 2 && winers[4] == 2)
@@ -615,8 +1142,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button5")
+                (currentButton.Name == "button5" && winers[4] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[4] = 2;
 
                     while (winers[4] == 2 && winers[3] == 2 && winers[2] == 2)
@@ -637,8 +1166,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button6")
+                (currentButton.Name == "button6" && winers[5] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[5] = 2;
 
                     while (winers[5] == 2 && winers[14] == 2 && winers[17] == 2)
@@ -655,8 +1186,10 @@ namespace WindowsFormsApplication1
 
                 }
                 else if
-                (currentButton.Name == "button7")
+                (currentButton.Name == "button7" && winers[6] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[6] = 2;
 
                     while (winers[6] == 2 && winers[5] == 2 && winers[4] == 2)
@@ -677,8 +1210,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-               (currentButton.Name == "button8")
+               (currentButton.Name == "button8" && winers[7] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[7] = 2;
 
                     while (winers[6] == 2 && winers[7] == 2 && winers[0] == 2)
@@ -695,8 +1230,11 @@ namespace WindowsFormsApplication1
 
                 }
                 else if
-                (currentButton.Name == "button9")
+                (currentButton.Name == "button9" && winers[8] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
+
                     winers[8] = 2;
 
                     while (winers[8] == 2 && winers[0] == 2 && winers[20] == 2)
@@ -717,8 +1255,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button10")
+                (currentButton.Name == "button10" && winers[9] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[9] = 2;
 
                     while (winers[9] == 2 && winers[1] == 2 && winers[21] == 2)
@@ -734,8 +1274,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button11")
+                (currentButton.Name == "button11" && winers[10] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[10] = 2;
 
                     while (winers[10] == 2 && winers[9] == 2 && winers[8] == 2)
@@ -756,8 +1298,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                 (currentButton.Name == "button12")
+                 (currentButton.Name == "button12" && winers[11] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[11] = 2;
 
                     while (winers[11] == 2 && winers[3] == 2 && winers[23] == 2)
@@ -773,8 +1317,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                 (currentButton.Name == "button13")
+                 (currentButton.Name == "button13" && winers[12] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[12] = 2;
 
                     while (winers[12] == 2 && winers[11] == 2 && winers[10] == 2)
@@ -795,8 +1341,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button14")
+                (currentButton.Name == "button14" && winers[13] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[13] = 2;
 
                     while (winers[13] == 2 && winers[17] == 2 && winers[5] == 2)
@@ -812,8 +1360,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button15")
+                (currentButton.Name == "button15" && winers[14] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[14] = 2;
 
                     while (winers[12] == 2 && winers[13] == 2 && winers[14] == 2)
@@ -834,8 +1384,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button16")
+                (currentButton.Name == "button16" && winers[15] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[15] = 2;
 
                     while (winers[15] == 2 && winers[14] == 2 && winers[8] == 2)
@@ -851,8 +1403,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button17")
+                (currentButton.Name == "button17" && winers[16] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[16] = 2;
 
                     while (winers[16] == 2 && winers[14] == 2 && winers[6] == 2)
@@ -873,8 +1427,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button18")
+                (currentButton.Name == "button18" && winers[17] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[17] = 2;
 
                     while (winers[17] == 2 && winers[18] == 2 && winers[16] == 2)
@@ -891,8 +1447,10 @@ namespace WindowsFormsApplication1
 
                 }
                 else if
-                (currentButton.Name == "button19")
+                (currentButton.Name == "button19" && winers[18] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[18] = 2;
 
                     while (winers[18] == 2 && winers[17] == 2 && winers[16] == 2)
@@ -914,8 +1472,10 @@ namespace WindowsFormsApplication1
 
                 }
                 else if
-                (currentButton.Name == "button20")
+                (currentButton.Name == "button20" && winers[19] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[19] = 2;
 
                     while (winers[19] == 2 && winers[15] == 2 && winers[7] == 2)
@@ -931,8 +1491,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button21")
+                (currentButton.Name == "button21" && winers[20] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[20] = 2;
 
                     while (winers[20] == 2 && winers[19] == 2 && winers[16] == 2)
@@ -953,8 +1515,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button22")
+                (currentButton.Name == "button22" && winers[21] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[21] = 2;
 
                     while (winers[21] == 2 && winers[9] == 2 && winers[1] == 2)
@@ -970,8 +1534,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button23")
+                (currentButton.Name == "button23" && winers[22] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[22] = 2;
 
                     while (winers[22] == 2 && winers[10] == 2 && winers[2] == 2)
@@ -992,8 +1558,10 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else if
-                (currentButton.Name == "button24")
+                (currentButton.Name == "button24" && winers[23] == 0)
                 {
+                    currentButton.BackColor = System.Drawing.Color.Blue;
+                    countblue--;
                     winers[23] = 2;
 
                     while (winers[23] == 2 && winers[11] == 2 && winers[3] == 2)
@@ -1436,6 +2004,37 @@ namespace WindowsFormsApplication1
             label1.Text = Convert.ToString(countred);
             countblue = 9;
             label2.Text = Convert.ToString(countblue);
+
+        }
+
+        private void redToYellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (winers[0] == 1)
+            {
+                button1.BackColor = System.Drawing.Color.Yellow;
+            }
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (turn == true)
+            {
+                groupBox1.Text = "نوبت قرمزه";
+            }
+            else
+            {
+                groupBox1.Text = "نوبت آبیه";
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }
